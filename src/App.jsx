@@ -1,10 +1,13 @@
 import ColorBox from "./components/ColorBox";
+import ColorContext from "./contexts/color";
 
 function App() {
   return (
-    <div>
-      <ColorBox />
-    </div>
+    <ColorContext.Provider value={{ color: "gray" }}>
+      <div>
+        <ColorBox />
+      </div>
+    </ColorContext.Provider>
   );
 }
 
